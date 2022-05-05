@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="WildCountry API Tests">
+    <listeners>
+        <listener class-name="main.java.listeners.TestSuiteListeners"/>
+    </listeners>
+    <test name="SanityTest" verbose="10" parallel="classes" thread-count="5">
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="test.java.bkart.dashboard"/>
+            <package name="test.java.bkart.analytics"/>
+            <package name="test.java.bkart.orders"/>
+            <package name="test.java.bkart.fieldExecutives"/>
+            <package name="test.java.bkart.settings"/>
+            <package name="test.java.bkart.thirdPartyVendors"/>
+            <package name="test.java.bkart.reverseDuty"/>
+        </packages>
+    </test>
+</suite>
